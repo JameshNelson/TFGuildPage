@@ -1,4 +1,4 @@
-angular.module("App", ['ui.router'])
+angular.module("TF", ['ui.router'])
     .config(function($stateProvider, $urlRouterProvider) {
 
       $urlRouterProvider.otherwise('/');
