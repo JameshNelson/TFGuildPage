@@ -1,0 +1,40 @@
+<nav-Bar> </nav-Bar>
+<div class='body'>
+  <div class = "roster">
+    <div class = "namebox">
+      <div class = "title">
+        Name
+      </div>
+        <div class = "names" ng-repeat = "roster in roster">
+      {{roster.name}}
+    </div>
+  </div>
+</br>
+  <div class = "classbox">
+      <div class = "title">
+      Class
+      </div>
+      <div class = "classes"ng-repeat = "roster in roster">
+      {{roster.class}}
+      </div>
+  </div>
+</br>
+  <div class = "rolebox">
+      <div class = "title">
+      Role
+      </div>
+      <div class = "roles" ng-repeat = "roster in roster">
+      {{roster.role}}
+    </div>
+  </div>
+  </br>
+  <div class = "armory">
+    <div class= "title">
+      Armory
+    </div> 
+    <div class = "armories"ng-repeat = "roster in roster">
+      <a href='{{roster.armory}}'> Armory</a>
+    </div>
+</div>
+  </div>
+</div>

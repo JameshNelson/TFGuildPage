@@ -27,6 +27,6 @@ const express = require('express'),
     })
   })
 
-app.listen(3000, function(){
+app.listen(80, function(){
   console.log('Running on Port ' + 3000 + ' me lord')
 })
