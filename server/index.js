@@ -21,12 +21,43 @@ const express = require('express'),
     resave: false,
   }))
 
+//GET
   app.get('/roster', function(req, res, next){
     db.get_roster(function(err, result){
       res.send(result);
     })
   })
 
-app.listen(80, function(){
+
+//POST
+app.post('/roster/add', function(req, res, next){
+  var player = req.body;
+  db.add_player(
+    [
+      player.name,
+      player.role,
+      player.class,
+      player.armory
+    ],
+    function(err, result){
+      res.send(result);
+      console.log(player); 
+    })
+})
+
+
+//PUT
+
+
+//DELETE
+app.delete('/delete/:name', function(req, res, next){
+  var deletePlayer = req.params.name
+  db.delete_player([deletePlayer], function(err, result){
+    res.send(deletePlayer);
+
+  })
+})
+
+app.listen(3000, function(){
   console.log('Running on Port ' + 3000 + ' me lord')
 })
