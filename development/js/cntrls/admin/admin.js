@@ -5,7 +5,12 @@ $scope.classes = ['DeathKnight', 'DemonHunter', 'Druid', 'Hunter', 'Mage', 'Monk
 $scope.roles = ['Dps', 'Healer', 'Tank']
 
   $scope.deletePlayer = function(name){
-    rosterService.removePlayer(name)
+    if(name === undefined){
+      alert("Name is required");
+    }
+    else {rosterService.removePlayer(name)
+      alert("Player Deleted")
+    }
   }
 
   $scope.addPlayer = function(name, role, pClass, armory){
@@ -15,14 +20,15 @@ $scope.roles = ['Dps', 'Healer', 'Tank']
       class: pClass,
       armory: armory
     }
-    // if(newPlayer.name === undefined || newPlayer.roll === undefined || newPlayer.class === undefined || newPlayer.armory === undefined){
-    //   alert("Fill out fields")
-    // }
-     rosterService.addPlayer(newPlayer);
-     alert('Succesful submit');
-     $route.reload();
+    if(newPlayer.name === undefined || newPlayer.role === undefined || newPlayer.class === undefined || newPlayer.armory === undefined){
+      alert("Fill out fields")
+    }
+    else {rosterService.addPlayer(newPlayer);
+     alert('Succesful submit');}
 
   }
+
+
 
 
 })
