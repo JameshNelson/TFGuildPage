@@ -1,0 +1,10 @@
+<nav-Bar> </nav-Bar>
+
+
+<tr class= "addPlayer()">
+      <td><input ng-model="newPlayer.name" type="text" placeholder="Name"</td>
+      <td><select ng-model="newPlayer.role" ng-options='x for x in roles'><option value="" disabled selected>Choose Role</option></select></td>
+      <td><select ng-model="newPlayer.pClass" ng-options='x for x in classes'><option value="" disabled selected>Choose Class</option></select>  </td>
+      <td><input ng-model="newPlayer.armory" type="text" placeholder="Armory url"</td>
+      <button ng-click="addPlayer(newPlayer.name, newPlayer.role, newPlayer.pClass, newPlayer.armory)">Add Player</button>
+    </tr>

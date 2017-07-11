@@ -9,7 +9,7 @@ angular.module("TF", ['ui.router'])
                controller: 'rosterCtrl',
                url: '/roster'
            })
-           
+
            .state('about', {
                templateUrl: '../views/about.html',
                controller: 'aboutCtrl',
@@ -20,5 +20,11 @@ angular.module("TF", ['ui.router'])
                templateUrl: '../views/calander.html',
                controller: 'calanderCtrl',
                url: '/calander'
+           })
+
+           .state('admin', {
+               templateUrl: '../views/admin.html',
+               controller: 'adminCtrl',
+               url: '/admin'
            });
  });

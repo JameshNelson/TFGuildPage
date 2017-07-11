@@ -9,6 +9,7 @@
   "author": "Rasbandit",
   "license": "ISC",
   "dependencies": {
+    "angular-route": "^1.6.5",
     "babel-preset-es2015": "^6.24.0",
     "body-parser": "^1.17.2",
     "cors": "^2.8.3",
